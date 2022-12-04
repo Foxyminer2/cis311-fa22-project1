@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 :root {
   --primary-color: #047aed;
@@ -13,12 +13,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
 
 body {
   font-family: 'Lato', sans-serif;
   color: #333;
   line-height: 1.6;
+  
 }
 
 ul {
@@ -56,3 +58,427 @@ pre {
   visibility: hidden;
   height: 0;
 }
+
+.showcase{
+  height: 550px;
+  position: relative;
+}
+
+.showcase .container{
+  justify-content: space-between;
+}
+
+.showcase-text p{
+  font-size: 1.5rem;
+}
+
+.showcase-text {
+  position: relative;
+  animation: slideInFromLeft 1s ease-in;
+  max-width: 2000px;
+}
+
+.showcase-form {
+  position: relative;
+  top: 50px;
+  padding: 40px;
+  z-index: 100;
+  animation: slideInFromRight 1s ease-in;
+  max-width: 500px;
+}
+
+.showcase-form .form-control{
+  margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email']
+{
+  border: 0;
+  border-bottom:1px solid #b4becb ;
+  width: 100%;
+  padding: 3px;
+  font-size:1.2rem ;
+  
+
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase {
+  position: relative;
+  height: 500px;
+}
+
+.showcase::after{
+  content: '';
+  position: absolute;
+  height: 150px;
+  bottom: -70px;
+  left: 0;
+  right: 0;
+  transform: skewY(-3deg);
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+@media (max-width: 1000px){
+
+  .grid, .showcase .grid, .stats .grid, .cli .grid, .cloud .grid, .special-grid .grid, .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .showcase{
+    height: auto;
+  }
+
+  .xl {
+    font-size: 3.5rem;
+  }
+
+  .showcase-text{
+    text-align: center;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form{
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+
+  .stats_card{
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .stat_card {
+    justify-self: center;
+    height: auto;
+    margin: auto;
+  }
+
+  .docs-main .container .doc{
+    height: 140%;
+    max-width: 140%;
+  }
+
+  
+}
+
+
+
+/* .stat_card{
+  font-size: 10rem;
+} */
+
+.cloud {
+  background-color: #047aed;
+  color: #fff;
+}
+
+.cloud .img {
+  align-items: center;
+}
+
+
+.features-head .container img{
+  max-width: 40%;
+}
+
+.features-sub-head .container img{
+  max-width: 60%;
+}
+
+.docs-head .container img{
+  max-width: 40%;
+}
+
+.docs-head {
+  padding: 2rem;
+}
+
+.languages .container{
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1000px;
+  margin-bottom: 1rem;
+}
+
+.languages .card img {
+  max-width: 70px;
+}
+
+.languages h4 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.languages .card {
+  transition: all 0.2s ease-in;
+}
+
+.lanuguages .card:hover{
+  transform: translateY(-15px);
+}
+
+/* animations */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    color: blue;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    color: blue;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    color: blue;
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    color: blue;
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+
+.stats {
+  padding-top: 150px;
+  font-size: 1rem;
+
+}
+
+.stats .container h3{
+  font-size: 1.5rem;
+ 
+}
+
+.stats-heading{
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.stats_card {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+
+footer .footer-display{
+  padding: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-display .social a{
+  padding: 0.5rem;
+}
+
+footer .footer-display .grid .grid-3{
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr;
+}
+
+.features-head{
+  background-color:#047aed;
+  color: #fff;
+  padding: 2rem;
+}
+
+.features-head .container p{
+  font-size: 1.5rem;
+}
+
+.features-head .container .split{
+  justify-content: space-between;
+}
+
+.features-sub-head{
+  background-color: rgb(236, 236, 236);
+  padding: 5rem;
+}
+
+.features-sub-head .container p{
+  font-size: 1.5rem;
+}
+
+
+
+.docs-main .container .doc{
+  height: 70%;
+  max-width: 60%;
+}
+
+.doc nav ul{
+  max-width: 300px;
+  flex-wrap: wrap;
+}
+
+.doc nav ul li{
+  border-bottom: solid gray 1px;
+}
+
+.docs-head {
+  background-color:#047aed;
+  color: #fff;
+}
+
+.alert{
+  background-color: #5cb85c;
+  padding: 0.75rem;
+  color: #fff;
+}
+
+
+.cli .container{
+  margin-bottom: 1rem;
+}
+
+
+.cli img {
+  max-width: 100%;
+}
+
+.cli {
+  display: flex;
+}
+
+.features-main{
+    display: grid;
+    grid-template-areas: 
+    "card1"
+    "card1"
+    "card1"
+    "card1"
+    "card1"
+    "card1"
+  ;
+  gap: 1rem;
+  padding: 2rem;
+  
+}
+
+.card1 {
+  background-color: var(--red);
+  grid-column: span 4;
+}
+
+.card1 i{
+  padding-top: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 0.75rem;
+}
+
+.card2 {
+  background-color: var(--teal);
+  grid-column: span 2;
+}
+
+.card2 i{
+  padding-top: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.card3 {
+  background-color: var(--green);
+  grid-column: span 2;
+}
+
+.card3 i{
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+}
+
+.card4 {
+  background-color: var(--light-blue);
+  grid-column: span 1.25;
+}
+
+.card4 i{
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.card5 {
+  background-color: var(--dark-blue);
+  grid-column: span 1.25;
+}
+
+.card5 i{
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.card6 {
+  background-color: var(--light-blue);
+  grid-column: span 2;
+}
+
+.card6 i{
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 1rem;
+}
+
+.docs-main .container .doc{
+  background-color: rgb(241, 241, 241);
+}
+
+.docs-main .container .doc nav ul li{
+  font-size: x-large;
+}
+
+.docs-main .container .doc h3{
+  font-size: x-large;
+}
+
+.docs-main .container .card{
+  font-size: large;
+}
+/* .docs{
+  background-color: #002240;
+  display: flex;
+} */
